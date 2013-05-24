@@ -1,0 +1,25 @@
+{
+  "author": "Benson Wong <mostlygeek@gmail.com>",
+  "description": "An AWS CloudWatch backend for StatsD",
+  "name": "statsd-backend-cloudwatch",
+  "version": "0.0.1",
+  "main": "lib/statsd-backend-cloudwatch.js",
+  "dependencies": {
+      "awssum-amazon-cloudwatch": "~1.0.0",
+      "awssum-amazon-imd": "~1.0.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mostlygeek/statsd-backend-cloudwatch"
+  },
+  "keywords": [
+    "statsd", "backend"
+  ], 
+  "license": {"type": "MIT", "url": "https://github.com/mostlygeek/statsd-backend-cloudwatch/LICENSE"}
+}
+
