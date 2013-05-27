@@ -12,17 +12,21 @@ available configuration options:
         backends: [ "statsd-backend-cloudwatch" ],
         cloudwatch: {
             namespace : "MyService",
-            region    : "AWS_REGION"
+            region    : "AWS_REGION",
             creds     : {
                 accessKeyId: "Access Key", 
                 secretAccessKey: "secret"
-            }
+            },
+
+            debug: false
         }
     }
 
-There is also support for fetching the access key and secret from an IAM Roles 
-assigned to the EC2 instance.  Set `creds` to `IAM` for credentials to be 
-automatically pulled from the EC2 instance's meta data.
+EC2 IAM roles are supported. This will automatically fetch a temporary access key, secret and token 
+from the EC2 metadata. Just make sure your IAM role has a security policy to put information 
+into CloudWatch. 
+
+Set `creds` to `IAM` for credentials to be automatically pulled from the EC2 instance's meta data.
 
     {
         backends: [ "statsd-backend-cloudwatch" ],
@@ -70,4 +74,11 @@ Example of what will happen to buckets names:
     MyApp.counters.requests     MyApp           counters.requests
     MyApp.counters.failures     MyApp           counters.failures
     MyApp/MyCounter.ok                  *skipped*
+
+## Debug Mode
+
+The `debug` flag will 
+
+* output the cloudwatch data (what does into the awssum API) to the console
+* won't send it to cloudwatch
 
