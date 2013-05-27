@@ -2,7 +2,7 @@
   "author": "Benson Wong <mostlygeek@gmail.com>",
   "description": "An AWS CloudWatch backend for StatsD",
   "name": "statsd-backend-cloudwatch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/statsd-backend-cloudwatch.js",
   "dependencies": {
       "awssum-amazon-cloudwatch": "~1.0.0",
