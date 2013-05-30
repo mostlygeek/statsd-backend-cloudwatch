@@ -79,6 +79,6 @@ Example of what will happen to buckets names:
 
 The `debug` flag will 
 
-* output the cloudwatch data (what does into the awssum API) to the console
-* won't send it to cloudwatch
+* output the cloudwatch data (what goes into the awssum API) to the console
+* stills sends it to CloudWatch
 
